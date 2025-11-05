@@ -1,0 +1,54 @@
+/* Custom styles for OverlayMenu - Responsive Version */
+
+#menu-scroll-container {
+  scrollbar-width: none;
+}
+#menu-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.menu-link {
+  position: relative;
+  /* حل: موبائل کے لیے انڈر لائن کا فاصلہ کم کیا گیا */
+  padding-bottom: 8px; 
+  color: #a0aec0;
+  transition: color 0.4s ease;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.menu-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  /* حل: موبائل پر انڈر لائن کو تھوڑا پتلا کیا گیا */
+  height: 2px;
+  background: linear-gradient(to right, #78C2A4, #4DD0E1);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%);
+  transform: scaleX(0) rotate(-1.5deg);
+  transform-origin: center;
+  transition: transform 0.4s ease-out;
+}
+
+.menu-link:hover {
+  color: transparent;
+  background-image: linear-gradient(to right, #78C2A4, #4DD0E1);
+}
+
+.menu-link:hover::after {
+  transform: scaleX(1) rotate(-1.5deg);
+}
+
+/* بڑی اسکرینوں کے لیے انڈر لائن کی موٹائی اور فاصلہ واپس بڑھانا */
+@media (min-width: 768px) {
+  .menu-link {
+    padding-bottom: 12px;
+  }
+
+  .menu-link::after {
+    height: 3px;
+  }
+}

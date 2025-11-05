@@ -1,0 +1,14 @@
+/* آئیکن کے دائرے کی اسٹائلنگ */
+.icon-wrapper {
+    background-image: linear-gradient(to bottom right, #a7f3d0, #6ee7b7);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  
+  /* آئیکن کے SVG کی اسٹائلنگ */
+  .icon-svg {
+    color: white;
+  }

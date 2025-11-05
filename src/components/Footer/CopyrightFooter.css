@@ -1,0 +1,16 @@
+.scrolling-text-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    
+    /* Solution 2: Yeh line scrollbar ko hide kar degi */
+    scrollbar-width: none; /* Firefox ke liye */
+  }
+  
+  /* Webkit browsers (Chrome, Safari, etc.) ke liye scrollbar hide karne ka tareeka */
+  .scrolling-text-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* 
+    Ab .scrolling-text par koi animation nahi hai.
+  */

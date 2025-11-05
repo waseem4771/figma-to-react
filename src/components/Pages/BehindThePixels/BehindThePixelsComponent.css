@@ -1,0 +1,26 @@
+/* Pixel styles (ab canvas se handle ho rahe hain, isliye inki zaroorat nahi) */
+.pixel {
+  position: absolute;
+  border-radius: 6px;
+}
+.pixel.filled {
+  background-color: #BDE4E1;
+}
+.pixel.outline {
+  border: 1.5px solid #BDE4E1;
+}
+  
+/* "Behind The Pixels" button ka style (is main koi tabdeeli nahi) */
+.badge-btn {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 1px solid rgba(178, 223, 219, 0.6);
+  border-radius: 9999px;
+  background-color: transparent;
+  font-size: 0.875rem;
+  font-weight: 400; 
+  background-image: linear-gradient(to right, #78C2A4, #4DD0E1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}

@@ -1,0 +1,52 @@
+/* Custom styles for HeroSection - Final Responsive Version */
+
+/* 
+  حل: 'BRANDING' کے لیے clamp() استعمال کیا گیا ہے تاکہ یہ چھوٹی اسکرینوں پر خود بخود چھوٹا ہو جائے۔
+  clamp(MIN, PREFERRED, MAX)
+  - MIN (4rem): کم از کم فونٹ سائز۔
+  - PREFERRED (16vw): اسکرین کی چوڑائی کے %16 کے برابر سائز۔
+  - MAX (9rem): زیادہ سے زیادہ فونٹ سائز۔
+*/
+.hero-text-branding {
+  font-size: clamp(4rem, 16vw, 9rem); 
+  font-weight: 700;
+  line-height: 0.8;
+  letter-spacing: -0.05em;
+  text-align: center; /* ٹیکسٹ کو اپنے کنٹینر کے اندر مرکز میں رکھتا ہے */
+  transform: scale(1.05, 0.95); 
+  background: linear-gradient(to right, #78C2A4, #4DD0E1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/* 
+  حل: SEO اور SEM کے لیے بھی clamp() استعمال کیا گیا ہے۔
+*/
+.hero-text-seo,
+.hero-text-sem {
+  font-size: clamp(4.5rem, 20vw, 11rem); 
+  font-weight: 700; 
+  line-height: 0.8;
+  letter-spacing: -0.05em;
+  transform: scale(1.05, 0.95); 
+  -webkit-text-stroke: 2px #00B894; 
+  -webkit-text-fill-color: transparent;
+  text-stroke: 2px #00B894;
+  color: transparent;
+}
+
+/* بڑی اسکرینوں کے لیے اسٹروک کو تھوڑا موٹا کرنا */
+@media (min-width: 768px) {
+  .hero-text-seo,
+  .hero-text-sem {
+    -webkit-text-stroke: 2.5px #00B894;
+    text-stroke: 2.5px #00B894;
+  }
+}
+
+/* لوگو کے لیے glow ایفیکٹ */
+.logo-glow {
+  filter: drop-shadow(0 0 35px rgba(135, 206, 250, 0.7));
+}
